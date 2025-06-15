@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="Stone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcomeScreen">
+            <h1>Rock Paper Scissors</h1>
+            <p class="intro-text">Play against the computer and test your luck!</p>
+            <div class="name-inputs">
+                <div class="input-group">
+                    <label for="playerName">Your Name</label>
+                    <input type="text" id="playerName" placeholder="Enter your name">
+                </div>
+            </div>
+            <button id="startGame" class="btn">Start Game</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="game-screen hidden" id="gameScreen">
+            <div class="header">
+                <h1>Rock Paper Scissors</h1>
+
+                <!-- Message Area - Now at the top -->
+                <div class="message-area" id="messageArea">
+                    <div class="status-message" id="statusMessage">
+                        <span>Choose your move!</span>
+                    </div>
+                    <div class="result-message" id="resultMessage">
+                        <div class="result-text">Make your selection to start</div>
+                        <div class="result-details" id="resultDetails"></div>
+                    </div>
+                </div>
+                <div class="score-board">
+                    <div class="score" id="playerScore">
+                        <p id="playerNameDisplay">You</p>
+                        <span>0</span>
+                    </div>
+                    <div class="vs-score">VS</div>
+                    <div class="score" id="computerScore">
+                        <p>Computer</p>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="choices">
+                    <div class="choice" data-choice="rock">
+                        <i class="fas fa-hand-rock"></i>
+                        <span>Rock</span>
+                    </div>
+                    <div class="choice" data-choice="paper">
+                        <i class="fas fa-hand-paper"></i>
+                        <span>Paper</span>
+                    </div>
+                    <div class="choice" data-choice="scissors">
+                        <i class="fas fa-hand-scissors"></i>
+                        <span>Scissors</span>
+                    </div>
+                </div>
+
+                <div class="battle-area" id="battleArea">
+                    <div class="player-choices">
+                        <div class="player-choice" id="playerChoice">
+                            <p id="playerNameChoice">You</p>
+                            <div class="choice-icon">
+                                <i class="fas fa-question"></i>
+                            </div>
+                        </div>
+                        <div class="vs">VS</div>
+                        <div class="player-choice" id="computerChoice">
+                            <p>Computer</p>
+                            <div class="choice-icon">
+                                <i class="fas fa-question"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="playAgain" class="btn">Play Again</button>
+                <button id="resetGame" class="btn">New Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="Stone.js"></script>
+</body>
+</html>
